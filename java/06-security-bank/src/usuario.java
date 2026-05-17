@@ -162,3 +162,39 @@ public class usuario {
         return tieneMayuscula && tieneMinuscula && tieneNumero && tieneEspecial;
     }
 }
+
+/*
+EXPLICACION PARA PRINCIPIANTES - usuario.java
+
+Esta clase representa a una persona que usa el banco.
+
+Que datos guarda:
+- nombre: el nombre del usuario.
+- contrasena: la clave que se usa para iniciar sesion.
+- rol: puede ser ADMIN o CLIENTE.
+- saldo: el dinero disponible.
+- limiteRetiro: cantidad maxima que puede retirar en una sola operacion.
+- intentosFallidos: cuenta cuantas veces fallo al iniciar sesion.
+- bloqueado: indica si la cuenta ya no puede entrar por fallar 3 veces.
+- historialMovimientos: lista donde se guardan retiros, depositos, accesos y errores.
+
+Que hace esta clase:
+- Revisa si la contrasena escrita es correcta con autentificar(...).
+- Revisa si el usuario es administrador con esAdmin().
+- Permite retirar dinero, pero valida monto, saldo y limite de retiro.
+- Permite depositar dinero.
+- Guarda movimientos en el historial.
+- Bloquea al usuario cuando llega a 3 intentos fallidos.
+- Valida si una contrasena es segura.
+
+Con que otras clases trabaja:
+- App.java crea objetos de esta clase para Daniel, Carlos y VIO.
+- SistemaLogin.java usa esta clase para revisar contrasenas, registrar intentos
+  fallidos y bloquear cuentas.
+- SistemaBanco.java usa esta clase para retirar al usuario origen, depositar al
+  usuario destino y guardar movimientos.
+
+Idea principal:
+usuario.java es como la ficha o cuenta bancaria de cada persona. Aqui estan sus
+datos y las reglas que afectan directamente a esa cuenta.
+*/

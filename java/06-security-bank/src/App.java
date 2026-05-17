@@ -83,3 +83,33 @@ public class App {
         System.out.println("+----------------------+----------------------+----------------------+");
     }
 }
+
+/*
+EXPLICACION PARA PRINCIPIANTES - App.java
+
+Esta es la pagina principal del programa. En Java, el metodo main es donde empieza
+todo cuando damos ejecutar.
+
+Que hace esta clase:
+- Crea tres usuarios: Daniel, Carlos y VIO.
+- Crea un objeto de SistemaLogin para probar el inicio de sesion.
+- Crea un objeto de SistemaBanco para hacer transferencias.
+- Muestra pruebas de contrasena segura.
+- Simula 3 intentos fallidos con el usuario VIO para bloquear su cuenta.
+- Prueba el acceso del administrador Daniel.
+- Prueba un retiro que supera el limite.
+- Hace una transferencia de Daniel a Carlos.
+- Imprime una interfaz sencilla en consola, parecida a tarjetas en columnas.
+- Muestra el historial de movimientos de cada usuario.
+
+Con que otras clases trabaja:
+- Trabaja con usuario.java porque necesita crear usuarios y consultar su saldo,
+  rol, limite, bloqueo e historial.
+- Trabaja con SistemaLogin.java porque usa login.log(...) para validar accesos.
+- Trabaja con SistemaBanco.java porque usa banco.transferir(...) para mover dinero.
+
+Idea principal:
+App.java no guarda las reglas importantes. Solo organiza y ejecuta el ejemplo.
+Las reglas de usuario estan en usuario.java, las reglas de login en SistemaLogin.java
+y las reglas bancarias en SistemaBanco.java.
+*/

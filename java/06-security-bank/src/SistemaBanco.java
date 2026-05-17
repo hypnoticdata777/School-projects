@@ -23,3 +23,27 @@ public class SistemaBanco {
         }
     }
 }
+
+/*
+EXPLICACION PARA PRINCIPIANTES - SistemaBanco.java
+
+Esta clase se encarga de las operaciones de dinero entre usuarios.
+
+Que hace esta clase:
+- Tiene el metodo transferir(...).
+- Recibe un usuario origen, un usuario destino y un monto.
+- Revisa que el monto sea mayor que cero.
+- Intenta retirar el dinero del usuario origen.
+- Si el retiro funciona, deposita ese dinero al usuario destino.
+- Guarda movimientos en el historial de los dos usuarios.
+- Si algo falla, muestra un mensaje y guarda el intento fallido.
+
+Con que otras clases trabaja:
+- Trabaja con usuario.java porque usa retirar(...), depositar(...),
+  agregarMovimiento(...) y getNombre().
+- App.java usa esta clase cuando llama banco.transferir(admin, cliente, 1500).
+
+Idea principal:
+SistemaBanco.java contiene la logica bancaria. No valida contrasenas, porque eso
+le toca a SistemaLogin.java. Su trabajo es mover dinero de forma controlada.
+*/
